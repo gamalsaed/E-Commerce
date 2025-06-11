@@ -1,0 +1,118 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.whitelist-Component {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+}
+
+.whiteEmpty {
+  text-align: start;
+  color: #666666;
+}
+
+h1 {
+  margin: 0;
+}
+
+.whiteListTable {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 !important;
+  align-self: center;
+}
+.whiteListTable td, .whiteListTable th {
+  text-align: left;
+  padding: 8px;
+}
+.whiteListTable table, .whiteListTable th, .whiteListTable td {
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+}
+.whiteListTable tr:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.whiteListTable tr {
+  text-align: center;
+}
+
+.Name-PRICE {
+  line-height: 25px;
+}
+
+.White-price {
+  color: #666666;
+  display: flex;
+  gap: 10px;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  font-weight: 100;
+}
+
+.WhiteListParent {
+  width: 90%;
+  padding: 40px;
+  overflow-x: auto;
+}
+.WhiteListParent .WhiteListParent-header {
+  margin-bottom: 20px;
+}
+.WhiteListParent .dele {
+  text-align: center;
+}
+.WhiteListParent .dele span {
+  cursor: pointer;
+}
+.WhiteListParent .adding-btn {
+  position: relative;
+}
+.WhiteListParent .adding-btn button {
+  transition: 0.5s ease-in-out;
+  all: unset;
+  background-color: #F02757;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 35px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.WhiteListParent .adding-btn button:hover {
+  background-color: #e01242;
+}
+.WhiteListParent .homePage {
+  all: unset;
+  color: black;
+  cursor: pointer;
+}
+.WhiteListParent .homePage:hover {
+  text-decoration: underline;
+  color: #F02757;
+}
+.WhiteListParent .location {
+  display: flex;
+  align-items: center;
+}
+
+.white-img {
+  width: 79px;
+}/*# sourceMappingURL=WhiteListComponent.css.map */

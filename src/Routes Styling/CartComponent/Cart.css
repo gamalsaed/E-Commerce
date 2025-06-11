@@ -1,0 +1,239 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.Cart-head-path {
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+}
+.Cart-head-path a {
+  color: #4e4e4e;
+}
+.Cart-head-path a:hover {
+  text-decoration: underline;
+  color: #F02757;
+}
+
+.Cart-Component {
+  padding: 50px 80px;
+}
+.Cart-Component .Cart-head {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 50px;
+}
+
+.Cart-Body {
+  display: flex;
+  gap: 50px;
+}
+
+.table-parent {
+  overflow: auto;
+  width: 100%;
+}
+
+.Cart-Table {
+  flex: 1;
+}
+.Cart-Table thead .pro {
+  text-align: center;
+}
+.Cart-Table thead tr, .Cart-Table thead td {
+  border-bottom: 1px solid #cccbcb;
+  font-size: 12px;
+}
+.Cart-Table tbody tr, .Cart-Table tbody td {
+  border-bottom: 1px solid #cccbcb;
+}
+.Cart-Table tbody .Cart-Img {
+  width: 90px;
+}
+.Cart-Table tbody .Cart-Img img {
+  cursor: pointer;
+  width: 90px;
+}
+.Cart-Table tbody .delete-Item span {
+  cursor: pointer;
+}
+.Cart-Table tbody .Cart-product-name span a {
+  color: black;
+}
+.Cart-Table tbody .Cart-product-name span:hover a {
+  cursor: pointer;
+  color: #F02757;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  gap: 10px;
+}
+.empty .emptyCart {
+  font-size: 230px;
+  color: #636363;
+}
+.empty a {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+.empty button {
+  all: unset;
+  background-color: #F02757;
+  padding: 20px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.empty button:hover {
+  background-color: #e01242;
+}
+
+.totals-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.st {
+  border-bottom: 1px solid #cccbcb;
+}
+
+.total {
+  font-size: 18px;
+}
+
+.table-copon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.totals-parent-wrapper {
+  background-color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px 40px 50px;
+  width: 500px;
+}
+.totals-parent-wrapper .totals-parent-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.totals-parent-wrapper .totals-parent-body div {
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+.totals-parent-wrapper .ndTotal {
+  font-weight: 700;
+  font-size: 24px;
+}
+.totals-parent-wrapper .totals-parent-foot button {
+  all: unset;
+  background-color: #F02757;
+  padding: 18px 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.totals-parent-wrapper .totals-parent-foot button:hover {
+  background-color: #e01242;
+}
+
+.copon-wrapper .copon {
+  display: flex;
+  gap: 20px;
+}
+.copon-wrapper .copon div input {
+  padding: 15px 25px;
+  border-radius: 5px;
+}
+.copon-wrapper .copon div input:focus::-webkit-input-placeholder {
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  transition-delay: 1s;
+  opacity: 0;
+}
+.copon-wrapper .copon div input[type=button] {
+  background-color: #F02757;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.copon-wrapper .copon div input[type=button]:hover {
+  background-color: #e01242;
+}
+
+@media only screen and (max-width: 1020px) {
+  .totals-parent-wrapper {
+    width: 100%;
+  }
+  .Cart-Body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .subTotals {
+    width: 100%;
+  }
+  .Cart-Table {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .Cart-Table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .totals-parent-wrapper {
+    width: 100%;
+  }
+}
+.copon-warring {
+  display: none;
+  width: auto;
+  background-color: #e2401c;
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  border-left: 0.6180469716em solid rgba(0, 0, 0, 0.15);
+  color: rgb(245, 225, 225);
+}
+
+@media only screen and (max-width: 395px) {
+  .copon {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .table-copon {
+    align-items: center;
+  }
+}/*# sourceMappingURL=Cart.css.map */

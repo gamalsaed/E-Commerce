@@ -1,0 +1,171 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.Register {
+  padding: 50px;
+}
+
+.name {
+  display: flex;
+  gap: 20px;
+}
+
+.Register-body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Register-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.input-wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+.input-wrapp span {
+  font-weight: 700;
+  font-size: 16px;
+}
+.input-wrapp input[type=text], .input-wrapp input[type=password], .input-wrapp input[type=email] {
+  width: 100%;
+  padding: 12px 12px;
+  font-size: 16px;
+  border: 2px solid #e4e4e4;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.input-wrapp input[type=text]:focus, .input-wrapp input[type=password]:focus, .input-wrapp input[type=email]:focus {
+  border: 2px solid black !important;
+  border-bottom: 2px solid #F02757 !important;
+}
+
+.radio {
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+          appearance: none !important;
+}
+
+.input-wrapp input[type=radio] {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.input-wrapp input[type=radio]::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 2px solid #F02757;
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  margin: auto;
+  transform: scale(0);
+  transition: all 0.1s ease-in-out;
+}
+.input-wrapp input[type=radio]:checked::after {
+  transform: scale(1);
+}
+.input-wrapp input[type=radio]:checked {
+  border: 1.5px solid #F02757;
+}
+
+.genders {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+.genders div {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.sign-up {
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  padding: 15px 0;
+  cursor: pointer;
+  color: white;
+  width: 100%;
+  background-color: #F02757;
+  transform: translateY(10px);
+  font-weight: 700;
+  font-size: 18px;
+}
+.sign-up:hover {
+  background-color: #e01242;
+}
+
+@media only screen and (max-width: 767px) {
+  .Register-body-wrapper {
+    width: 100%;
+  }
+}
+.inputdone {
+  border: 2px solid rgb(15, 131, 77);
+}
+.inputdone:focus {
+  border: 2px solid black;
+  border-bottom: 2px solid #F02757;
+}
+
+.notDone {
+  border: 2px solid red;
+}
+.notDone:focus {
+  border: 2px solid black;
+  border-bottom: 2px solid #F02757;
+}
+
+.Error-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Error-Validation-Handler {
+  width: 80%;
+  background-color: #e2401c;
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  color: rgb(245, 225, 225);
+  border-left: 0.6180469716em solid rgba(0, 0, 0, 0.15);
+}
+
+.visibility {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #bebebe;
+  font-size: 21px !important;
+  cursor: pointer;
+}/*# sourceMappingURL=Register.css.map */

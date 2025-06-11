@@ -1,0 +1,82 @@
+@import "../../SASS/Mixin/Mixin.scss";
+
+
+.Account-Information-wrapper{
+    padding: 50px;
+}
+.account-information-body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .save{
+        background-color: $main-color;
+        width: fit-content;
+        color: white;
+        padding: 15px 50px;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+            background-color: $hover-color;
+        }
+    }
+    .name{
+        width: 100%;
+        .input-wrapp{
+            .input-dis{
+                display: flex;
+                gap: 10px;
+                div{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    position: relative;
+                    span{
+                        color: $text-color;
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
+                    &:hover{
+                        span{
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.input-wrapp{
+    .input-dis{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        .inp{
+            width: 100%;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+            span{
+                color: $text-color;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            &:hover{
+                span{
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .name{
+        width: 100% !important;
+        flex-direction: column;
+    }
+}

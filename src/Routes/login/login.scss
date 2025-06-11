@@ -1,0 +1,94 @@
+@import "../../SASS/Mixin/Mixin.scss";
+// #666666
+.Login{
+    padding: 50px;
+    .error-wrapper{
+        display: flex;
+        justify-content: start;
+        margin-right: 50px;
+        display: none;
+        h3{
+            width: calc(100% - 100px);
+            background-color: #e2401c;
+            padding: 15px 20px;
+            border-left: 10px solid #a52609;
+            color: white;
+            font-size: 16px !important;
+            span{
+                font-weight: 100 !important;
+            }
+        }
+    }
+    .forms-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .forms{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            h1{
+                font-size: 40px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .form-submit{
+                    background-color: $main-color;
+                    color: white;
+                    font-size: 16px;
+                    padding: 20px 0;
+                    border-radius: 5px;
+                }
+                .remember-lost{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .remember{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        color: $text-color;
+                        input{
+                            &:checked{
+                                accent-color: rgb(75, 75, 253) !important;
+                            }
+                        }
+                    }
+                }
+                .input-div{
+                    width: 440px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    input{
+                        width: 100%;
+                        padding: 13px 10px;
+                        outline: 3px solid $border-color;
+                        font-size: 16px;
+                        border-radius: 5px;
+                        &:focus::-webkit-input-placeholder{
+                            transition:  0.3s  ease-in-out ;
+                            transition-delay: 0.4s;
+                            opacity: 0 ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 470px) {
+    .forms{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .input-div{
+        width: 100% !important;
+        input{
+            width: 100%;
+        }
+    }
+}

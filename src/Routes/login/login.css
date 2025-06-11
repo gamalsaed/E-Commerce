@@ -1,0 +1,109 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.Login {
+  padding: 50px;
+}
+.Login .error-wrapper {
+  display: flex;
+  justify-content: start;
+  margin-right: 50px;
+  display: none;
+}
+.Login .error-wrapper h3 {
+  width: calc(100% - 100px);
+  background-color: #e2401c;
+  padding: 15px 20px;
+  border-left: 10px solid #a52609;
+  color: white;
+  font-size: 16px !important;
+}
+.Login .error-wrapper h3 span {
+  font-weight: 100 !important;
+}
+.Login .forms-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Login .forms-wrapper .forms {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.Login .forms-wrapper .forms h1 {
+  font-size: 40px;
+}
+.Login .forms-wrapper .forms form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Login .forms-wrapper .forms form .form-submit {
+  background-color: #F02757;
+  color: white;
+  font-size: 16px;
+  padding: 20px 0;
+  border-radius: 5px;
+}
+.Login .forms-wrapper .forms form .remember-lost {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Login .forms-wrapper .forms form .remember-lost .remember {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666666;
+}
+.Login .forms-wrapper .forms form .remember-lost .remember input:checked {
+  accent-color: rgb(75, 75, 253) !important;
+}
+.Login .forms-wrapper .forms form .input-div {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Login .forms-wrapper .forms form .input-div input {
+  width: 100%;
+  padding: 13px 10px;
+  outline: 3px solid #E4E4E4;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.Login .forms-wrapper .forms form .input-div input:focus::-webkit-input-placeholder {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0.4s;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 470px) {
+  .forms {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .input-div {
+    width: 100% !important;
+  }
+  .input-div input {
+    width: 100%;
+  }
+}/*# sourceMappingURL=login.css.map */

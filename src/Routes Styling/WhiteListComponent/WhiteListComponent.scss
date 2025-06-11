@@ -1,0 +1,94 @@
+@import "../../SASS/Mixin/Mixin.scss";
+.whitelist-Component{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: center;
+}
+.whiteEmpty{
+    text-align: start;
+    color: $text-color;
+}
+h1{
+    margin: 0;
+}
+.whiteListTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 !important;
+    align-self: center;
+    td, th {
+      text-align: left;
+      padding: 8px;
+    }
+    table, th, td {
+      border: 1px solid #dddddd;
+      border-collapse: collapse;
+    }
+    tr:hover{
+      background-color: rgba(0,0,0,.03);
+    }
+    tr{
+      text-align: center;
+    }
+  }
+  .Name-PRICE{
+    line-height: 25px;
+  }
+  .White-price{
+    color: $text-color;
+    display: flex;
+    gap: 10px;
+  }
+  .oldPrice{
+    text-decoration: line-through;
+    font-weight: 100;
+  }
+.WhiteListParent{
+    width: 90%;
+    padding: 40px;
+    overflow-x: auto;
+    .WhiteListParent-header{
+      margin-bottom: 20px;
+    }
+    .dele{
+      text-align: center;
+      span{
+        cursor: pointer;
+      }
+    }
+    .adding-btn{
+      position: relative;
+        button{
+            transition: .5s ease-in-out;
+            all: unset;
+            background-color: $main-color;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 14px 35px;
+            cursor: pointer;
+            border-radius: 3px;
+            &:hover{
+              background-color: $hover-color;
+            }
+          }
+        }
+        .homePage{
+        all: unset;
+        color: black;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+            color: $main-color;
+        }
+    }
+    .location{
+        display: flex;
+        align-items: center;
+    }
+}
+.white-img{
+    width: 79px;
+}

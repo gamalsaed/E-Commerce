@@ -1,0 +1,50 @@
+@import "../../SASS/Mixin/Mixin.scss";
+.notFound-Wrapper{
+    background-color: white;
+}
+.notFound{
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    .notFound-info{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h1{
+            font-size: 80px;
+            color: $main-color;
+        }
+        h2{
+            font-size: 50px;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            color: white;
+            background-color: $main-color;
+            width: fit-content;
+            padding: 13px 24px;
+            border-radius: 5px;
+            font-weight: 700;
+            .arrow{
+                font-size: 17px;
+                font-weight: 700;
+                transition: all 0.2s linear;
+            }
+            &:hover{
+                background-color: $hover-color;
+                .arrow{
+                    transition: all 0.3s linear;
+                    transform: translateX(4px);
+                }
+            }
+        }
+        p{
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,148 @@
+@import "../../SASS/Mixin/Mixin.scss";
+
+.Register{
+    padding: 50px;
+}
+.name{
+    display: flex;
+    gap: 20px;
+}
+.Register-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Register-body-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+.input-wrapp{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    span{
+        font-weight: 700;
+        font-size: 16px;
+    }
+    input[type=text], input[type=password], input[type=email]{
+        width: 100%;
+        padding: 12px 12px;
+        font-size: 16px;
+        border: 2px solid #e4e4e4;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        &:focus{
+            border: 2px solid black !important;
+            border-bottom: 2px solid $main-color !important;
+        }
+    }
+}
+.radio{
+    appearance: none !important;
+}
+.input-wrapp{
+input[type=radio]{
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid black;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    &::after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        border: 2px solid #F02757;
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        margin: auto;
+        transform: scale(0);
+        transition: all 0.1s ease-in-out;
+    }
+    &:checked::after{
+        transform: scale(1);
+    }
+    &:checked{
+        border: 1.5px solid #F02757;
+    }
+  }
+}
+.genders{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    div{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+}
+.sign-up{
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px 0;
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    background-color: $main-color;
+    transform: translateY(10px);
+    font-weight: 700;
+    font-size: 18px;
+    &:hover{
+        background-color: $hover-color;
+    }
+}
+@media only screen and (max-width:767px) {
+    .Register-body-wrapper{
+        width: 100%;
+    }
+}
+
+
+.inputdone{
+    border: 2px solid rgb(15, 131, 77);
+    &:focus{
+        border: 2px solid black;
+        border-bottom: 2px solid $main-color;
+    }
+}
+
+.notDone{
+    border: 2px solid red;
+    &:focus{
+        border: 2px solid black;
+        border-bottom: 2px solid $main-color;
+    }
+    
+}
+.Error-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Error-Validation-Handler{
+    width: 80%;
+    background-color: #e2401c;
+    margin-bottom: 20px;
+    padding: 18px 20px;
+    color: rgb(245, 225, 225);
+    border-left:.6180469716em solid rgba(0,0,0,.15);
+}
+.visibility{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #bebebe;
+    font-size: 21px !important;
+    cursor: pointer;
+}

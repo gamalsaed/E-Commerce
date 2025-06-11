@@ -1,0 +1,92 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.Account-Information-wrapper {
+  padding: 50px;
+}
+
+.account-information-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.account-information-body .save {
+  background-color: #F02757;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  padding: 15px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.account-information-body .save:hover {
+  background-color: #e01242;
+}
+.account-information-body .name {
+  width: 100%;
+}
+.account-information-body .name .input-wrapp .input-dis {
+  display: flex;
+  gap: 10px;
+}
+.account-information-body .name .input-wrapp .input-dis div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+.account-information-body .name .input-wrapp .input-dis div span {
+  color: #666666;
+  font-size: 14px;
+  cursor: pointer;
+}
+.account-information-body .name .input-wrapp .input-dis div:hover span {
+  color: #F02757;
+}
+
+.input-wrapp .input-dis {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.input-wrapp .input-dis .inp {
+  width: 100%;
+}
+.input-wrapp .input-dis div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+.input-wrapp .input-dis div span {
+  color: #666666;
+  font-size: 14px;
+  cursor: pointer;
+}
+.input-wrapp .input-dis div:hover span {
+  color: #F02757;
+}
+
+@media only screen and (max-width: 500px) {
+  .name {
+    width: 100% !important;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=accountInformation.css.map */

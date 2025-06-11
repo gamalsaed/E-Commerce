@@ -1,0 +1,640 @@
+@import "../../SASS/Mixin/Mixin.scss";
+*{
+    overflow-wrap: break-word;
+}
+.checkout{
+    padding: 50px;
+}
+.checkout-head{
+    @include head;
+    .checkout-head-path{
+        @include path;
+    }
+    a{
+        color: #4e4e4e;
+        &:hover{
+            color: $main-color;
+            text-decoration: underline;
+        }
+    }
+}
+.open-copon{
+    margin-bottom: 20px;
+    padding: 18px 20px;
+    background-color: #3d9cd2;
+    border-left:.6180469716em solid #117bb8;
+    color: white;
+    font-size: 18px;
+    
+    span{
+        cursor: pointer;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+.activeCoupon{
+    transition:all 0.5s ease-in-out;
+    height: 235px!important;
+}
+.copon-add{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    height: 0;
+    transition:all 0.5s ease-in-out;
+    .coupon-inp{
+        display: flex;
+        gap: 50px;
+        margin-left: 2px;
+        div{
+            width: 80%;
+            input{
+                padding: 18px;
+                border-radius: 5px;
+                width: 100%;
+                outline: 2px solid #e4e4e4;
+                font-size: 18px;
+                transition:all 0.5s ease-in-out;
+                &:focus{
+                    outline: 2px solid black;
+                }
+                &:focus::-webkit-input-placeholder{
+                    transition: all  0.6s  ease-in-out ;
+                    transition-delay: 1s;
+                    opacity: 0 ;
+                    
+                }
+            }
+        }
+        .but{
+            button{
+                all: unset;
+                padding: 20px;
+                background-color: $main-color;
+                color: white;
+                font-weight: 700;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover{
+                    background-color: $hover-color;
+                }
+            }
+        }
+    }
+}
+.input-sheet{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.checkout-inputs{
+    width: 100%;
+}
+.checkout-inputs-names{
+    display: flex;
+    gap: 20px;
+}
+.checkout-input-div-name{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input-sheet{
+    input[type=text]{
+        padding: 18px;
+        border-radius: 5px;
+        outline: 2px solid #e4e4e4;
+        transition: all 0.3s ease-in-out;
+        &:focus{
+            outline: 2px solid black;
+        }
+    }
+}
+.checkout-sheet{
+    $parentWidth: 60%;
+    width: $parentWidth;
+    background-color: white;
+    padding: 30px 40px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .sheet-title{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e4e4e4;
+    }
+    .product-price{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+        span{
+            flex: 1;
+            text-align: end;
+
+        }
+    }
+    .product-name{
+        padding-right: 60px;
+        padding-left: 0;
+        .material-symbols-outlined{
+            font-size: 15px;
+            text-align: center;
+            padding-left: 10px;
+            transform: translateY(3px);
+        }
+    }
+    .dis{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e4e4e4;
+        padding-bottom: 30px;
+    }
+
+    .totalOfSheet, .sheet-title {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width: 250px) {
+    .checkout-sheet{
+        .totalOfSheet, .sheet-title{
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
+input{
+    box-sizing: border-box;
+}
+.company{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.checkout-inputs-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.dropDownListActivate{
+    display: block !important;
+}
+.Select{
+    position: relative;
+    z-index: 10000;
+    .content{
+        display: none;
+        background-color: white;
+        position: absolute;
+        width: 99.5%;
+        border: 1px solid black;
+        border-top: none;
+        border-radius: 5px;
+        top: 48px;
+        ul{
+            overflow-y: auto;
+            list-style: none;
+            margin: 0;
+            box-sizing: border-box;
+            padding: 12px;
+            padding-top: 60px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            z-index: 1000000000000;
+
+            li{
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                cursor: pointer;
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+        .search{
+            background-color: white;
+            padding-top: 10px;
+            position: absolute;
+            width: 98%;
+            display: flex;
+            justify-content: center;
+            input{
+                outline: none !important;
+                border: 1px solid black;
+                width: 97%;
+                padding: 10px;
+                position: absolute;
+                top: 8px;
+            }
+        }
+    }
+.readOnly{
+    position: relative;
+        .listDrop{
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+        input{
+            width: 100%;
+            cursor: pointer;
+            &:focus{
+                outline: 2px solid #e4e4e4 !important;
+            }
+        }
+    }
+}
+.cuntry{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.city{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    z-index: 1000;
+    .Select-city{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        .readOnly-city{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+            .readOneCity{
+                cursor: pointer;
+                
+                &:focus{
+                    outline: 2px solid #e4e4e4;
+                }
+            }
+            .listDrop{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+        }
+        .content{
+            display: none;
+            background-color: white;
+            position: absolute;
+            width: 99.5%;
+            border: 1px solid black;
+            border-top: none;
+            border-radius: 5px;
+            top: 48px;
+            z-index: -1;
+            .search-city{
+                width: 100%;
+                input{
+                    width: 97%;
+                    padding: 10px;
+                    outline: none;
+                    border: 1px solid black;
+                    position: relative;
+                    left: 7px;
+                    top: 5px;
+                    &:focus{
+                        outline: none;
+                    }
+                    // height: 30px;
+                }
+            }
+            .city-list{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                height: 200px;
+                overflow: auto;
+                margin-top: 1px;
+                li{
+                    width: 100%;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+.loads{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 10000000000000000000000000000;
+    display: none;
+    .back-load{
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        opacity: 0.5;
+    }
+    .ani-load{
+        width: 20px;
+        height: 20px;
+        border: 10px dotted black;
+        border-radius: 50%;
+        padding: 20px;
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        animation: 2s linear  infinite reverse both running load;
+    }
+}
+@keyframes load {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+.city{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.placeAn{
+
+    &:focus::-webkit-input-placeholder{
+        transition: all  0.6s  ease-in-out ;
+        transition-delay: 1s;
+        opacity: 0 ;
+    }
+}
+.flexDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.additional{
+    padding: 18px;
+    border-radius: 5px;
+    border: none;
+    outline: 2px solid #e4e4e4;
+    transition: all 0.3s ease-in-out;
+    &:focus{
+        outline: 2px solid black;
+    }
+}
+input:focus::-webkit-input-placeholder{
+    transition: all  0.1s  ease-in-out ;
+    transition-delay: 0.1s;
+    opacity: 0 ;
+    
+}
+textarea:focus::-webkit-input-placeholder{
+    transition: all  0.6s  ease-in-out ;
+    transition-delay: 1s;
+    opacity: 0 ;
+    
+}
+@media only screen and (max-width: 530px){
+    .checkout-inputs-names{
+        width: calc(100% - 20px);
+    }
+}
+@media only screen and (max-width: 460px){
+    .coupon-inp{
+        flex-direction: column !important;
+    }
+    .but{
+        width: 100% !important;
+        text-align: center;
+    }
+    .copon-add .coupon-inp .but button{
+        width: 85% !important;
+        text-align: center;
+    }
+    .copon-add .coupon-inp div{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 800px){
+    .input-sheet{
+        flex-direction: column;
+    }
+    .checkout-sheet{
+        width: calc(100% - 80px);
+    }
+}
+.paymentMethods{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    .radio-parend{
+        display: flex;
+        gap: 5px;
+        border-bottom: 1px solid #e4e4e4;
+        padding-bottom: 22px;
+        margin-bottom: 22px;
+        flex-wrap: wrap;
+        label{
+            transform: translateY(2px);
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+    .payment-description{
+        height: 0;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+    }
+    #paymentMethod-one, #paymentMethod-two, #paymentMethod-three{
+        appearance: none;
+
+    }
+}
+input[type=radio]{
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid black;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    &::after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        border: 2px solid #F02757;
+        display: block;
+        position: absolute;
+        top: 3.5px;
+        left: 3px;
+        margin: auto;
+        transform: scale(0);
+        transition: all 0.1s ease-in-out;
+    }
+    &:checked::after{
+        transform: scale(1);
+    }
+    &:checked{
+        border: 1.5px solid $hover-color;
+    }
+  }
+  p{
+    padding-left: 22px;
+    color: $text-color;
+    font-size: 16px;
+    line-height: 23px;
+    a{
+        color: black;
+        font-size: 18px !important;
+        &:hover{
+            color: $hover-color;
+        }
+    }
+}
+.placeorder{
+    all: unset;
+    padding: 20px 0;
+    text-align: center;
+    background-color: $main-color;
+    border-radius: 5px;
+    cursor: pointer;
+    a{
+        color: white;
+        font-weight: 700;
+    }
+    &:hover{
+        background-color: $hover-color;
+    }
+}
+
+
+.loadings{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.4;
+}
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
