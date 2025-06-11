@@ -1,0 +1,154 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .Slide-Card {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+}
+.mySwiper-Two {
+  border: none !important;
+  width: 100%;
+  justify-content: center;
+  height: 230px;
+}
+.mySwiper-Two .swiper-button-prev .swiper-button-disabled::after {
+  content: " ";
+  border: 1px solid black;
+}
+.mySwiper-Two .swiper-button-next::after, .mySwiper-Two .swiper-button-prev::after {
+  color: black;
+  border-radius: 50%;
+  padding: 15px 20px;
+  font-size: 10px;
+  font-weight: 700;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.swiper-button-next::after {
+  transform: translateX(-10px);
+}
+
+.swiper-button-prev::after {
+  transform: translateX(10px);
+}
+
+.swiper-button-next:hover::after, .swiper-button-prev:hover::after {
+  border: 2px solid #F02757;
+}
+
+.Slide-Card {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  height: 169px;
+  margin-left: 0 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.Slide-Card .Slide-Card-Section {
+  text-align: center;
+  color: #999999;
+  font-size: 11px;
+  cursor: pointer;
+}
+.Slide-Card .Slide-Card-Section:hover {
+  color: #F02757;
+  text-decoration: underline;
+}
+.Slide-Card div img {
+  width: 169px;
+  height: 169px;
+  cursor: pointer;
+  border-radius: 5px;
+  transform: translateY(5px);
+}
+
+.Slide-Card-Descreption {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+.Slide-Card-Descreption .stars {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.Slide-Card-Descreption .stars .star {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: -3px;
+  padding-right: 2px;
+}
+.Slide-Card-Descreption .ProductPrice {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #666666;
+}
+.Slide-Card-Descreption .ProductPrice .currentPrice {
+  color: #F02757;
+  font-size: 14px;
+}
+.Slide-Card-Descreption .ProductPrice .oldPrice {
+  color: #999999;
+  text-decoration: line-through;
+  text-indent: 10px;
+}
+.Slide-Card-Descreption .Slide-Card-Name {
+  color: black;
+  font-size: 15px;
+  padding-right: 55px;
+  cursor: pointer;
+}
+.Slide-Card-Descreption .Slide-Card-Name:hover {
+  color: #F02757;
+}
+
+.swiper-button-disabled:hover {
+  pointer-events: unset;
+  cursor: not-allowed !important;
+}
+.swiper-button-disabled:hover:hover {
+  border: none !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  top: 197px !important;
+}
+
+.swiper-slide {
+  border-radius: 5px;
+}
+
+.Slide-Card-Name a {
+  text-decoration: none;
+  color: black;
+}
+.Slide-Card-Name a:hover {
+  color: #F02757;
+  text-decoration: underline;
+}/*# sourceMappingURL=SlideOne.css.map */

@@ -1,0 +1,145 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.card {
+  background-repeat: repeat;
+  background-position: left;
+  transition-duration: 500ms;
+  position: relative;
+  width: 391px;
+  height: 240px;
+}
+
+.mainCard {
+  transition: 0.5s ease-in-out;
+  overflow-x: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 80%;
+  position: relative;
+  border-radius: 5px;
+}
+.mainCard:hover .card {
+  transition-duration: 500ms;
+  transform: translateX(-25px);
+}
+.mainCard:hover .txt .type {
+  background-color: #F02757;
+  transition: 0.5s ease-in-out;
+  color: white;
+}
+
+.divShop {
+  cursor: pointer;
+}
+.divShop:hover .shop::before {
+  transition: 0.3s;
+  width: 0;
+}
+.divShop .shop {
+  font-size: 11px;
+  font-weight: 900;
+}
+.divShop .shop::before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 1px;
+  width: 62px;
+  color: black;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.type {
+  transition: 0.5s ease;
+  cursor: default;
+}
+
+.txt {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.txt > .type {
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  padding: 5px 9px;
+  border-radius: 3px;
+}
+
+.parent {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  gap: 20px !important;
+  margin: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.Name {
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.priceWas {
+  text-decoration: line-through;
+}
+
+.CurrentPrice {
+  color: #f02757;
+  padding-left: 5px;
+}
+
+.Posterprice {
+  color: #46A4DA;
+  padding-left: 5px;
+}
+
+@media only screen and (max-width: 748px) {
+  .parent {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.divShop {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.ShowCards-sponcer {
+  display: flex;
+  justify-content: space-around;
+}/*# sourceMappingURL=cards.css.map */

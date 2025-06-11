@@ -1,0 +1,125 @@
+@import "../Mixin/Mixin.scss";
+.card{
+    background-repeat: repeat;
+    background-position: left;
+    transition-duration: 500ms;
+    position: relative;
+    width: 391px;
+    height: 240px ;
+}
+.mainCard{
+    transition: 0.5s ease-in-out;
+    overflow-x: hidden;
+    height: fit-content;
+    width: 80% ;
+    position: relative;
+    border-radius: 5px;
+    &:hover{
+        .card{
+            transition-duration: 500ms;
+            transform: translateX(-25px);
+        }
+        .txt .type{
+            background-color: $main-color;
+            transition: 0.5s ease-in-out;
+            color: white;
+        }
+
+    }
+
+    
+    
+}
+.divShop{
+    cursor: pointer;
+    &:hover{
+        .shop::before{
+            transition: .3s;
+            width: 0;
+        }
+    }
+    .shop{
+        font-size: 11px;
+        font-weight: 900;
+        &::before{
+            content: " ";
+            display: inline-block;
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            height: 1px;
+            width: 62px;
+            color: black;
+            background-color: black;
+            transition: .3s;
+        }     
+    }
+}
+.type{
+    transition: 0.5s ease;
+    cursor: default;
+}
+.txt{
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    & > .type {
+        background-color: #FFFFFF99;
+        font-size: 13px;
+        padding: 5px 9px;
+        border-radius: 3px;
+    }
+}
+
+.parent{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    gap: 20px !important;
+    margin: 0;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    
+}
+.Name{
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.priceWas{
+    text-decoration:line-through;
+}
+.CurrentPrice{
+    color: #f02757;
+    padding-left: 5px;
+    // #46A4DA
+}
+.Posterprice{
+    color: #46A4DA;
+    padding-left: 5px;  
+}
+@media only screen and (max-width: 748px){
+    .parent{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height:fit-content
+}
+.divShop{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.ShowCards-sponcer{
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,260 @@
+@import "../Mixin/Mixin.scss";
+.addingmsg{
+    background-color: #5fbd74;
+    position: fixed;
+    width: 100%;
+    top: -40px;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    z-index: 100000000000000000000;
+}
+    .SlideShowParent{
+        position: fixed;
+        z-index: -1;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        display: flex;
+    }
+    .ProductShow-Container{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    .background-product-show{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #4e4e4e;
+        opacity: 0.8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.animate{
+    transition: all 0.2s ease-in-out !important;
+    animation-name: rota;
+    animation-duration: 100ms;
+    animation-delay: 1;
+}
+@keyframes rota {
+    from{
+        transform: rotateX(0deg);
+    }to{
+        transform: rotateX(90deg);
+    }
+}
+.product-Show-Slide{
+    width: 100%;
+    display: flex;
+    height: 500px;
+    // padding: 20px;
+    justify-content: center;
+    .product-Show-Slide-wrapper{
+        transform: rotateX(0deg);
+        .product-show-close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+        position: relative;
+        background-color: white;
+        width: 63%;
+        display: flex;
+        height: auto;
+        height: 80%;
+        align-items: center;
+        .product-show-img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-height: 100%;
+            max-width: 100%;
+            // transform: translateX(-150px);
+        }
+    }
+    
+}
+.swiper-initialized{
+    .swiper-button-next:hover::after{
+        border: none !important;
+    }
+    .swiper-button-prev:hover::after{
+        border: none !important;
+    }
+}
+.ProductShow-Swiper{
+    border: none !important;
+}
+.product-slide-show-img{
+    width: 92% !important;
+}
+.product-show-info{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 96%;
+}
+.product-show-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    align-items: start;
+    padding: 0 40px;
+    .product-show-actions{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        padding-left: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e0e0e0;
+        width: 100%;
+        .product-show-like, .product-show-compare{
+            background-color: #cecece;
+            width: 52px;
+            padding: 6.5px 0;
+            border-radius: 3px;
+            cursor: pointer;
+            &:hover{
+                background-color: $hover-color;
+            }
+        }
+
+        .product-show-compare{
+            &:hover{
+                background-color: $hover-color;
+                color: white;
+            }
+        }
+        .product-show-like{
+            &:hover{
+                // font-variation-settings: 'FILL' 1, 'wght' 900, 'GRAD' 0, 'opsz' 48;
+                color: $main-color;
+
+            }
+        }
+        .product-show-AddTo-Cart{
+            display: flex;
+            align-items: center;
+            padding: 8.5px 18px;
+            background-color: $main-color;
+            color: white;
+            font-size: 12px;
+            font-weight: 900;
+            justify-content: space-evenly;
+            border-radius: 3px;
+            cursor: pointer;
+            &:hover{
+                background-color: $hover-color;
+            }
+        }
+        .product-show-count{
+            width: 52px;
+            padding: 10px 0;
+            border: 2px solid #cecece;
+            text-align: center;
+            border-radius: 3px;
+        }
+    }
+    .product-show-info{
+        display: flex;
+        gap: 20px;
+        // flex-direction: ;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e0e0e0;
+        .product-show-Name{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: start;
+        }
+        .product-show-details{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+            gap: 20px;
+
+            .product-show-description{
+                text-align: start;
+                color: #666666;
+                font-size: 18px;
+            }
+            .product-show-price-review{
+                color: #999999;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                gap: 20px;
+                .price{
+                    color: $main-color;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+.product-show-section{
+    color: #999999;
+    padding-left: 20px;
+    .product-show-section{
+        color: black;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        &:hover{
+            color: $main-color;
+            text-decoration: underline;
+        }
+    }
+}
+@media only screen and (max-width: 1006px) {
+.product-Show-Slide-wrapper{
+    flex-direction: column;
+    overflow-y: auto;
+}
+    .product-Show-Slide{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .product-show-section{
+        padding-bottom: 50px;
+    }
+    .product-show-img{
+        width: 100%;
+    }   
+}
+@media only screen and (max-width: 656px) {
+    .product-Show-Slide{
+        height: 100%;
+    }
+    .product-Show-Slide .product-Show-Slide-wrapper {
+        width: 90%;
+        height: 100%;
+    }
+    .swiper{
+        height: 90%;
+    }
+    .swiper-slide{
+        height: 100%;
+    }
+    .swiper-button-next{
+        display: none;
+    }
+    .swiper-button-prev{
+        display: none;
+    }
+}

@@ -1,0 +1,135 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.WhoParent {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  max-width: 100%;
+  position: relative;
+}
+
+.WhoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 40px 0;
+  width: 100%;
+}
+.WhoWrapper div {
+  margin: 0 20px;
+}
+.WhoWrapper div .p-1 {
+  max-width: 256px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666666;
+}
+.WhoWrapper div .p-2 {
+  width: 316px;
+  white-space: 10;
+  line-height: 1.5;
+  color: #666666;
+}
+.WhoWrapper div button {
+  all: unset;
+  padding: 15px 22px;
+  font-size: 14px;
+  border: 2px solid #F02757;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+}
+.WhoWrapper div button:hover {
+  color: #F02757;
+  transition: 0.3s;
+}
+.WhoWrapper .Who-S-Two {
+  width: 37.037037037%;
+}
+.WhoWrapper .Who-S-Two img {
+  width: 100%;
+}
+.WhoWrapper .Who-S-One {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.WhoWrapper .Who-S-Three {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.WhoWrapper .Who-S-Three .Stores {
+  max-width: 350px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+}
+.WhoWrapper .Who-S-Three .Stores .stores-number {
+  color: #F02757;
+  font-size: 48px;
+  font-weight: 700;
+}
+.WhoWrapper .Who-S-Three .Stores .stor {
+  font-size: 18px;
+}
+.WhoWrapper .Who-S-Three .Stores .stores-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .WhoWrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 775px) {
+  .Who-S-Two {
+    width: 100% !important;
+  }
+  .Who-S-Two img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 847px) {
+  .WhoWrapper {
+    gap: 10px;
+  }
+  .WhoWrapper .Who-S-Two img {
+    max-width: 100%;
+  }
+  .WhoWrapper .Who-S-One .p-1 {
+    width: 100%;
+  }
+  .WhoWrapper .Who-S-One .p-2 {
+    width: 100%;
+  }
+  .WhoWrapper .Who-S-One .WhoWrapper {
+    gap: 20px;
+  }
+}/*# sourceMappingURL=Who.css.map */

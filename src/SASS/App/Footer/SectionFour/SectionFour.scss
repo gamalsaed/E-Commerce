@@ -1,0 +1,63 @@
+@import "../../../Mixin/Mixin.scss";
+
+.SectionFour{
+    padding: 60px 30px;
+    background-color: white ;
+    .SectionFour-Wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        .right-side{
+            display: flex;
+            gap: 10px;
+        }
+        .links{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: $text-color;
+            li{
+                a{
+                    all: unset;
+                    cursor: pointer;
+                    &:hover{
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        div{
+            a{
+                all: unset;
+                cursor: pointer;
+                &:hover{
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:650px) {
+    .SectionFour-Wrapper{
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-side{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (max-width:350px) {
+.links{
+    flex-direction: column;
+}
+}

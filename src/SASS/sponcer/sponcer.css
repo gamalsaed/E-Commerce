@@ -1,0 +1,101 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.sponcer {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sponcer .sponcer-Wrapper {
+  background-color: #CEE7E3;
+  display: flex;
+  width: 95%;
+  padding: 0 30px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.sponcer .sponcer-Wrapper .bigSale {
+  background-color: #FFC32B;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Percentage {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.promoCode {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 4px 10px;
+  background-color: #F02757;
+}
+
+.sponcer-img {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1067px) {
+  .sponcer {
+    margin: 40px 0;
+  }
+  .sponcer-img {
+    padding-top: 30px;
+  }
+  .left-side {
+    padding-top: 30px;
+  }
+  .sponcer-Wrapper {
+    padding: 30px;
+  }
+  .sponcer-Wrapper .promo {
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .sponcer {
+    margin: 100px 0;
+  }
+  .sponcer .sponcer-Wrapper {
+    justify-content: start;
+  }
+}/*# sourceMappingURL=sponcer.css.map */

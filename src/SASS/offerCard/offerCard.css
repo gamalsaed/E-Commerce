@@ -1,0 +1,168 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.OfferDiv {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-flow: row wrap;
+}
+.OfferDiv .OfferCard {
+  width: calc(33.3333333333% - 65px);
+}
+.OfferDiv .OfferCard .OfferCard-Wrapper {
+  height: 240px !important;
+  width: 100% !important;
+}
+.OfferDiv .OfferCard .OfferCard-Wrapper .OfferCard-Info {
+  transform: translateX(170px) !important;
+  gap: 27px;
+}
+.OfferDiv .OfferCard .OfferCard-Wrapper .OfferCard-Info .shop-wrapper .shop a {
+  font-size: 16px !important;
+  font-weight: 300 !important;
+}
+
+.OfferCard {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+.OfferCard:hover .type {
+  background-color: #F02757 !important;
+  color: white;
+}
+.OfferCard .OfferCard-Wrapper {
+  border-radius: 5px;
+  width: 337.328px;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+.OfferCard .OfferCard-Wrapper .OfferCard-Info {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  position: absolute;
+  right: 200px;
+  top: 20px;
+  width: 125px;
+}
+.OfferCard .OfferCard-Wrapper .OfferCard-Info .shop-wrapper .shop a {
+  font-size: 16px !important;
+  font-weight: 300 !important;
+}
+.OfferCard .OfferCard-Wrapper .OfferCard-Info .type {
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  padding: 5px 9px;
+  border-radius: 3px;
+  transition: 0.5s ease;
+  cursor: default;
+}
+.OfferCard .OfferCard-Wrapper .OfferCard-Info .name {
+  font-size: 18px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  height: 60px;
+  width: inherit;
+  cursor: default;
+}
+.OfferCard .OfferCard-Wrapper .OfferCard-Info .shop-wrapper .arrow-cyc::after, .OfferCard .OfferCard-Wrapper .OfferCard-Info .shop-wrapper .arrow-cyc::before {
+  box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: -2px;
+  left: -2px;
+  border: 2px solid transparent;
+}
+.OfferCard .OfferCard-Wrapper .OfferCard-Info .shop-wrapper:hover {
+  transition: all 1s linear;
+}
+.OfferCard .OfferCard-Wrapper .OfferCard-Info .shop-wrapper:hover .shop::before {
+  width: 0;
+}
+.OfferCard .OfferCard-Wrapper .OfferCard-Info .shop {
+  font-size: 11px;
+  font-weight: 900;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.OfferCard .OfferCard-Wrapper .OfferCard-Info .shop a {
+  color: black;
+  text-decoration: none;
+}
+.OfferCard .OfferCard-Wrapper .OfferCard-Info .shop::before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 80px;
+  color: black;
+  background-color: black;
+  transition: 0.3s;
+}
+.OfferCard .OfferCard-Wrapper img {
+  transition: 0.5s;
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  background-position: cover;
+}
+.OfferCard:hover img {
+  transform: translateX(-20px);
+}
+
+@media only screen and (max-width: 748px) {
+  .cards {
+    width: 95%;
+  }
+  .cards .OfferCard {
+    width: 102%;
+    border-radius: 5px;
+  }
+  .cards .OfferCard .OfferCard-Wrapper {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .OfferDiv .OfferCard {
+    width: 90%;
+  }
+  .OfferDiv .OfferCard .OfferCard-Wrapper {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0;
+    box-sizing: border-box;
+    height: 270px;
+  }
+}/*# sourceMappingURL=offerCard.css.map */

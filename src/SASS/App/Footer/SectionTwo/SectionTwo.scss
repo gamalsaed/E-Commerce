@@ -1,0 +1,86 @@
+@import "../../../Mixin/Mixin.scss";
+.SectionTwo{
+    background-color: white;
+    padding: 60px 30px;
+    .SectionTwo-Wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        position: relative;
+        &::after{
+            content: " ";
+            display: block;
+            height: 2px;
+            width: 90%;
+            position: absolute;
+            bottom: -60px;
+            opacity: .2;
+            background-color: $text-color;
+        }
+        .SectionTwo-INFO{
+            li{
+                color: $text-color;
+            }
+            .number{
+                color: black !important;
+            }
+            .support{
+                color: black;
+                border-bottom: 1px solid red;
+                width: fit-content;
+
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 10px;
+            h2{
+                padding: 0;
+                margin: 0;
+                font-size: 18px;
+                font-weight: 700;
+                padding-bottom: 20px;
+            }
+            li{
+                a{
+                    all: unset;
+                    font-size: 14px;
+                    color: $text-color;
+                    cursor: pointer;
+                    &:hover{
+                        color: $hover-color;
+                    }
+                }
+            }
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 1020px) {
+    .SectionTwo{
+        .SectionTwo-Wrapper{
+            flex-wrap: wrap;
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .SectionTwo{
+        .SectionTwo-Wrapper{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            ul{
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

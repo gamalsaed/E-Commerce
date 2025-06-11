@@ -1,0 +1,59 @@
+.FixedFooter {
+  position: fixed;
+  z-index: 50000;
+  background-color: white;
+  bottom: 0;
+  width: 100%;
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+.FixedFooter .Fixed-Wrapper {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+.FixedFooter .Fixed-Wrapper .Footer-box {
+  box-sizing: border-box;
+  font-size: 12px;
+  display: flex;
+  flex-grow: 1;
+  cursor: pointer;
+  gap: 5px;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px;
+  flex-direction: column-reverse;
+  border: 1px solid #e4e4e4;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: black;
+  text-decoration: none;
+}
+.FixedFooter .Fixed-Wrapper .Footer-box .Fiexed-Footer {
+  font-size: 15px;
+  font-weight: 700;
+}
+.FixedFooter .Fixed-Wrapper .Footer-box .Fiexed-Footer a {
+  all: unset;
+}
+.FixedFooter .Fixed-Wrapper .Footer-box .fixed-icon {
+  transition: 0.3s;
+  font-size: 30px;
+}
+.FixedFooter .Fixed-Wrapper .Footer-box:hover .fixed-icon {
+  transform: scale(0.9);
+}
+
+@media only screen and (max-width: 1007px) {
+  .FixedFooter {
+    display: block;
+  }
+}/*# sourceMappingURL=Fixed.css.map */

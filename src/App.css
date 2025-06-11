@@ -1,0 +1,20 @@
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.placeAni:focus::-webkit-input-placeholder{
+  transition: all  0.6s  ease-in-out ;
+  transition-delay: 1s;
+  opacity: 0 ;
+}
+input[type=radio]{
+  width: 10px;
+  height: 10px;
+  border: 1px solid #F02757;
+  border-radius: 50%;
+  
+}

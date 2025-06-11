@@ -1,0 +1,79 @@
+@import "../../../Mixin/Mixin.scss";
+.iconss{
+    font-size: 40px;
+    font-weight: 200;
+    cursor: default;
+}
+h4{
+    margin: 0;
+    padding: 0;
+}
+.SectionThree{
+    background-color: white;
+    padding: 60px 30px;
+    font-size: 14px;
+
+}
+
+.descip{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+    div{
+        color: $text-color;
+    }
+}
+.Section-Three-Icons{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: .2s ease-in-out ;
+    &:hover{
+        .iconss{
+            transform: scale(.9);
+            transition: .2s ease-in-out ;
+        }
+    }
+}
+.SectionThree-Wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative  ;
+    &::after{
+        content: " ";
+        display: block;
+        background-color: $text-color;
+        height: 2px;
+        width: 90%;
+        opacity: 0.2;
+        position: absolute;
+        bottom: -60px;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width:767px) {
+    .Part-Three{
+        flex-wrap: wrap;
+    }
+    .social{
+        flex-wrap: wrap;
+    }
+    .SectionThree-Wrapper{
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        .descip{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .Section-Three-Icons{
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

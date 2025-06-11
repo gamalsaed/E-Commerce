@@ -1,0 +1,125 @@
+@import "../Mixin/Mixin.scss";
+.WhoParent{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    max-width: 100%;
+    position: relative;
+}
+.WhoWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 40px 0;
+    width: 100%;
+    div{
+        margin: 0 20px;
+         .p-1{
+            max-width: 256px;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #666666;
+        }
+         .p-2{
+            width: 316px;
+            white-space: 10;
+            line-height: 1.5;
+            color: #666666;
+        }
+        button{
+            all: unset;
+            padding: 15px 22px;
+            font-size: 14px;
+            border: 2px solid $main-color;
+            border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+            font-weight: bold;
+            &:hover{
+                color: $main-color;
+                transition: 0.3s;
+            }
+        }
+    }
+    .Who-S-Two{
+        width: calc(100% / 2.7);
+        img{
+            width: 100%;
+        }
+    }
+    .Who-S-One{
+        display: flex;
+        align-items: start;
+        justify-content:center;
+        flex-direction: column;
+        // flex-basis: 1;
+        padding: 0 20px;
+    }
+    .Who-S-Three{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .Stores{
+            max-width: 350px;
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            align-items: center;
+            .stores-number{
+                color: $main-color;
+                font-size: 48px;
+                font-weight: 700;
+            }
+            .stor{
+                font-size: 18px;
+
+
+            }
+            .stores-info{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .WhoWrapper{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+@media only screen and (max-width: 775px) {
+    .Who-S-Two{
+        width: 100% !important;
+        img{
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 847px){
+    .WhoWrapper{
+        .Who-S-Two{
+            img{
+                max-width: 100%;
+            }
+        }
+        gap: 10px;
+        .Who-S-One{
+            .p-1{
+                width: 100%;
+            }
+            .p-2{
+                width: 100%;
+            }
+            .WhoWrapper{
+                gap: 20px;
+            }
+        }
+    }
+  }

@@ -1,0 +1,78 @@
+@import "../Mixin/Mixin.scss";
+.sponcer{
+    
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .sponcer-Wrapper{
+        background-color: #CEE7E3;
+        display: flex;
+        width: 95%;
+        padding: 0 30px;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 30px;
+        .bigSale{
+            background-color: #FFC32B;
+            width: fit-content;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 3px;
+        }
+    }
+}
+.promo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.left-side{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Percentage{
+    font-size: 20px;
+    font-weight: 700;
+}
+.promoCode{
+    width: fit-content;
+    color: white;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 4px 10px;
+    background-color: $main-color;
+}
+.sponcer-img{
+    height: 100%;
+}
+@media only screen and (max-width: 1067px) {
+    .sponcer{
+        margin: 40px 0 ;
+    }
+    .sponcer-img{
+        padding-top: 30px;
+    }
+    .left-side{
+        padding-top: 30px;
+    }
+    .sponcer-Wrapper{
+        padding: 30px;
+        .promo{
+            padding-bottom: 30px;
+        }
+    }
+  }
+  @media only screen and (max-width: 680px){
+    .sponcer{
+        margin: 100px 0;
+        .sponcer-Wrapper{
+            justify-content: start;
+        }
+    }
+  }

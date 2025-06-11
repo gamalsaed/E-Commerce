@@ -1,0 +1,92 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.SectionTwo {
+  background-color: white;
+  padding: 60px 30px;
+}
+.SectionTwo .SectionTwo-Wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.SectionTwo .SectionTwo-Wrapper::after {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 90%;
+  position: absolute;
+  bottom: -60px;
+  opacity: 0.2;
+  background-color: #666666;
+}
+.SectionTwo .SectionTwo-Wrapper .SectionTwo-INFO li {
+  color: #666666;
+}
+.SectionTwo .SectionTwo-Wrapper .SectionTwo-INFO .number {
+  color: black !important;
+}
+.SectionTwo .SectionTwo-Wrapper .SectionTwo-INFO .support {
+  color: black;
+  border-bottom: 1px solid red;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.SectionTwo .SectionTwo-Wrapper ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.SectionTwo .SectionTwo-Wrapper ul h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.SectionTwo .SectionTwo-Wrapper ul li a {
+  all: unset;
+  font-size: 14px;
+  color: #666666;
+  cursor: pointer;
+}
+.SectionTwo .SectionTwo-Wrapper ul li a:hover {
+  color: #e01242;
+}
+
+@media only screen and (max-width: 1020px) {
+  .SectionTwo .SectionTwo-Wrapper {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .SectionTwo .SectionTwo-Wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .SectionTwo .SectionTwo-Wrapper ul {
+    align-items: center;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=SectionTwo.css.map */

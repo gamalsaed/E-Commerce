@@ -1,0 +1,95 @@
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #E94E3D;
+  }
+  25% {
+    box-shadow: 0 -125px 0 2px white, -60px -60px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, -60px 60px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 60px 60px 0 2px white, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -125px 0 2px white, -125px 0px 0 2px white, 0px 125px 0 2px white, 120px 40px 0 2px white, 0 0 0 2px #fff;
+  }
+}
+.iconss {
+  font-size: 40px;
+  font-weight: 200;
+  cursor: default;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.SectionThree {
+  background-color: white;
+  padding: 60px 30px;
+  font-size: 14px;
+}
+
+.descip {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 5px;
+}
+.descip div {
+  color: #666666;
+}
+
+.Section-Three-Icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.2s ease-in-out;
+}
+.Section-Three-Icons:hover .iconss {
+  transform: scale(0.9);
+  transition: 0.2s ease-in-out;
+}
+
+.SectionThree-Wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.SectionThree-Wrapper::after {
+  content: " ";
+  display: block;
+  background-color: #666666;
+  height: 2px;
+  width: 90%;
+  opacity: 0.2;
+  position: absolute;
+  bottom: -60px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .Part-Three {
+    flex-wrap: wrap;
+  }
+  .social {
+    flex-wrap: wrap;
+  }
+  .SectionThree-Wrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .SectionThree-Wrapper .descip {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .SectionThree-Wrapper .Section-Three-Icons {
+    flex-direction: column;
+    gap: 20px;
+  }
+}/*# sourceMappingURL=SectionThree.css.map */
